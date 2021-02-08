@@ -1,0 +1,25 @@
+﻿@model List<NetCoresubat.Entities.category>
+@{
+    ViewData["Title"] = "CetegoriesPage";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h1>CetegoriesPage</h1>
+
+<table>
+    <thead>
+        <tr>ID</tr>
+        <tr>Categories Name</tr>
+    </thead>
+    <tr>
+        <td>@foreach (var item in Model)
+        {
+             @item.categoryID
+        }</td>
+
+        <td> @foreach (var name in Model)
+        {
+              @name.categoryName
+        }</td>
+    </tr>
+</table>

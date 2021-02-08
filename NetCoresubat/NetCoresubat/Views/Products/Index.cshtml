@@ -1,0 +1,16 @@
+﻿@model List<NetCoresubat.Entities.products>
+<html>
+<head>
+    <title>Umut Atalay</title>
+
+    <link href="~/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <h1 class="text-danger">Text</h1>
+
+    @foreach (var item in Model)
+    {
+        <h1>@item.productsName</h1>
+    }
+</body>
+</html>
