@@ -1,0 +1,19 @@
+﻿@model AddProductsModel
+
+<form asp-action="AddProducts" asp-controller="Home" method="post">
+    <div class="form-group">
+        <label>Product Name :</label>
+        <span asp-validation-for="@Model.ProductName"></span>
+        <input asp-for="@Model.ProductName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Product Price :</label>
+        <span asp-validation-for="@Model.ProductPrice"></span>
+        <input asp-for="@Model.ProductPrice" class="form-control" />
+    </div>
+
+    <button type="submit">
+        ADD PRODUCT
+    </button>
+</form>

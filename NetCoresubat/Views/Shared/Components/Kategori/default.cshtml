@@ -1,0 +1,12 @@
+﻿@model List<NetCoresubat.Entities.category>
+
+@foreach (var item in Model)
+{
+    <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+            <h5 class="card-title">@item.categoryID</h5>
+            <p class="card-text">@item.categoryName  TL</p>
+        </div>
+    </div>
+}

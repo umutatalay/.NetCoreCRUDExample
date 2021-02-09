@@ -1,0 +1,13 @@
+﻿@model List<NetCoresubat.Entities.products>
+
+@foreach (var item in Model)
+{
+    <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+            <h5 class="card-title">@item.productsName</h5>
+            <p class="card-text">@item.productsPrice  TL</p>
+            <a asp-action="GetProductsByID" asp-controller="Home" asp-route-id="@item.productsID" class="btn btn-primary"> Detay </a>
+        </div>
+    </div>
+}

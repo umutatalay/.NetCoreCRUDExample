@@ -1,0 +1,21 @@
+﻿@model products
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <h1>
+            Seçilen ürün :
+        </h1>
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">ID : @Model.productsID</h5>
+                <h5 class="card-title">@Model.productsName</h5>
+                <p class="card-text">@Model.productsPrice TL</p>
+
+            </div>
+        </div>
+    </body>
+</html>
