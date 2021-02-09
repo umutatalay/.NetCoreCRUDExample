@@ -30,24 +30,24 @@ namespace NetCoresubat.Controllers
         }
 
         public IActionResult GetProductsByID(int id)
-        {   
+        {
+            
             return View(_productRepository.GetByID(id));
         }
 
+
+
         [HttpPost]
-        public IActionResult AddProductsTest(AddProductsModel p)
+        public IActionResult AddProducts(AddProductsModel p)
         {
             products product = new products();
             product.productsName = p.ProductName;
             product.productsPrice = p.ProductPrice;
             _productRepository.Add(product);
-
-
-            return RedirectToAction("Index", "Home");
-
+            return View();
         }
-
-        public IActionResult Test()
+        [HttpGet]
+        public IActionResult AddProducts()
         {
             return View();
         }
