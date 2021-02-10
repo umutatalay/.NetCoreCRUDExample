@@ -58,6 +58,27 @@ namespace NetCoresubat.Controllers
             return RedirectToAction("Index");
         }
 
+        public IActionResult UpdateProduct(int id)
+        {
+            var p = _productRepository.GetByID(id);
+            UpdateProductsModel model = new UpdateProductsModel {
+                ProductName = p.productsName,
+                ProductPrice = p.productsPrice,
+                ProductID = p.productsID,
 
+            };
+            return View(model);
+        }
+        [HttpPost]
+        public IActionResult UpdateProduct(UpdateProductsModel p)
+        {
+            var currentproduct = _productRepository.GetByID(p.ProductID);
+            products product = new products();
+
+            currentproduct.productsName = p.ProductName;
+            currentproduct.productsPrice = p.ProductPrice;
+            _productRepository.Update(product);
+            return View();
+        }
     }
 }

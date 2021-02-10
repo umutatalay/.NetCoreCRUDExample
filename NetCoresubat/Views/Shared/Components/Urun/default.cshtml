@@ -16,6 +16,7 @@
                 <p class="card-text">@item.productsPrice  TL</p>
                 <a asp-action="GetProductsByID" asp-controller="Home" asp-route-id="@item.productsID" class="btn btn-primary"> Info </a>
                 <a asp-action="RemoveProduct" asp-controller="Home" asp-route-id="@item.productsID" class="btn btn-danger"> Delete </a>
+                <a asp-action="UpdateProduct" asp-controller="Home" asp-route-id="@item.productsID" class="btn btn bg-warning"> Update Data  </a>
             </div>
         </div>
     }
